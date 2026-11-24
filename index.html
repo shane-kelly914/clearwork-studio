@@ -151,6 +151,28 @@ p{margin:0}
 @media (max-width:900px){.t-a,.t-b,.t-c,.t-d{grid-column:span 6}.kit{grid-template-columns:1fr 1fr}.kit div:nth-child(2){border-right:0}.kit div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 @media (max-width:520px){.kit{grid-template-columns:1fr}.kit div{border-right:0;border-bottom:1px solid var(--line)}.kit div:last-child{border-bottom:0}}
 
+/* sample work */
+.work-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px}
+.work-top .sec-head{margin-bottom:0}
+.work-nav{display:flex;gap:10px}
+.work-nav button{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--bg);color:var(--fg);display:grid;place-items:center;cursor:pointer;transition:border-color .2s,opacity .2s}
+.work-nav button:hover{border-color:var(--muted)}
+.work-nav button:disabled{opacity:.35;cursor:default}
+.work-nav svg{width:18px;height:18px}
+.work{display:grid;grid-auto-flow:column;grid-auto-columns:min(560px,82%);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:max(20px,calc((100vw - var(--wrap))/2 + 20px));padding:4px max(20px,calc((100vw - var(--wrap))/2 + 20px)) 18px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.shot{display:grid;gap:12px;margin:0;align-content:start;scroll-snap-align:start;min-width:0}
+.shot .frame{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface);box-shadow:0 20px 40px -30px rgba(26,23,20,.35);transition:transform .25s}
+.shot:hover .frame{transform:translateY(-3px)}
+.shot .bar{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line);background:var(--bg)}
+.shot .bar i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.shot img{display:block;width:100%;height:auto;aspect-ratio:16/10}
+.shot figcaption{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.shot figcaption b{font:600 16px var(--display)}
+.shot figcaption span{font-size:14px;color:var(--muted)}
+.work-note{margin-top:14px;font-size:14px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.shot .frame{transition:none}.shot:hover .frame{transform:none}}
+@media (max-width:600px){.work-nav{display:none}}
+
 /* audience */
 .aud{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .aud-card{border:1px solid var(--line);border-radius:18px;padding:28px;background:linear-gradient(180deg,var(--surface),transparent);display:grid;gap:14px;align-content:start}
@@ -276,6 +298,7 @@ footer a:hover{color:var(--fg)}
     <a class="logo" href="#top"><svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true"><polygon points="0,0 64,0 64,36 100,36 100,100 0,100" fill="#ff7a2f"/><rect x="74" y="0" width="26" height="26" fill="#1a0d04"/></svg>Clearwork Studio</a>
     <nav class="nav-links" aria-label="Sections">
       <a href="#build">What I build</a>
+      <a href="#work">Work</a>
       <a href="#who">Who it's for</a>
       <a href="#process">How it works</a>
       <a href="#engage">Working together</a>
@@ -289,6 +312,7 @@ footer a:hover{color:var(--fg)}
   <div class="mobile-menu" id="mobile-menu">
     <div class="wrap">
       <a href="#build">What I build</a>
+      <a href="#work">Work</a>
       <a href="#who">Who it's for</a>
       <a href="#process">How it works</a>
       <a href="#engage">Working together</a>
@@ -377,6 +401,55 @@ footer a:hover{color:var(--fg)}
           <div><span class="eyebrow">AI</span><b>Prompt-engineered workflows</b><small>Automation where it saves real hours.</small></div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="sec" id="work" style="padding-top:0">
+    <div class="wrap">
+      <div class="work-top">
+        <div class="sec-head">
+        <span class="eyebrow">Sample work</span>
+        <h2>See what your site could look like.</h2>
+        <p>A few sample sites designed for local trades. Yours is built from scratch around your business, and you see it before you pay anything.</p>
+      </div>
+        <div class="work-nav">
+          <button type="button" id="work-prev" aria-label="Previous samples"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button type="button" id="work-next" aria-label="Next samples"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="work" id="work-row" tabindex="0" aria-label="Sample websites, scroll sideways">
+        <figure class="shot">
+          <div class="frame"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="work/thistlewood.jpg" width="1200" height="750" loading="lazy" alt="A photo-led website for a home remodeler, with a bright white oak kitchen and a free quote button"></div>
+          <figcaption><b>Thistlewood Remodeling</b><span>Home remodeling</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="work/corbel.jpg" width="1200" height="750" loading="lazy" alt="A refined website for a custom home builder, with a modern cedar home at dusk and a plan your build button"></div>
+          <figcaption><b>Corbel Custom Homes</b><span>Custom home building</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="work/brightfield.jpg" width="1200" height="750" loading="lazy" alt="A deep teal website for a solar installer, with solar panels at sunset and a lime quote button"></div>
+          <figcaption><b>Brightfield Solar</b><span>Solar installation</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="work/larkspur.jpg" width="1200" height="750" loading="lazy" alt="A white and orange website for a general contractor, with a bold Done right headline and a services list"></div>
+          <figcaption><b>Larkspur Builders</b><span>General contracting</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="work/northgable.jpg" width="1200" height="750" loading="lazy" alt="A website for a roofer with a bold condensed headline over a mountain landscape and a free inspection button"></div>
+          <figcaption><b>Northgable Roofing</b><span>Roofing &amp; repairs</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="work/hartwell.jpg" width="1200" height="750" loading="lazy" alt="A dark, warm website for a kitchen and bath remodeler, with a dark modern kitchen photo and a free estimate button"></div>
+          <figcaption><b>Hartwell Renovations</b><span>Kitchen &amp; bath remodeling</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="work/stonebrook.jpg" width="1200" height="750" loading="lazy" alt="A light, sage-green website for a fence installer, with a slatted wood fence photo and a free quote button"></div>
+          <figcaption><b>Stonebrook Fence Co.</b><span>Fence installation</span></figcaption>
+        </figure>
+    </div>
+    <div class="wrap">
+      <p class="work-note">Sample designs for illustration. The businesses shown are fictional, and the photos are AI-generated or stock.</p>
     </div>
   </section>
 
@@ -744,5 +817,18 @@ document.querySelectorAll(".toggle button").forEach(b => b.addEventListener("cli
 })();
 </script>
 
+<script>
+{
+  const row = document.getElementById("work-row"), prev = document.getElementById("work-prev"), next = document.getElementById("work-next");
+  if (row && prev && next) {
+    const step = () => { const c = row.querySelector(".shot"); return c ? c.getBoundingClientRect().width + 20 : row.clientWidth * .8; };
+    const sync = () => { prev.disabled = row.scrollLeft < 8; next.disabled = row.scrollLeft + row.clientWidth > row.scrollWidth - 8; };
+    prev.addEventListener("click", () => row.scrollBy({left: -step(), behavior: "smooth"}));
+    next.addEventListener("click", () => row.scrollBy({left: step(), behavior: "smooth"}));
+    row.addEventListener("keydown", e => { if (e.key === "ArrowRight") { e.preventDefault(); next.click(); } if (e.key === "ArrowLeft") { e.preventDefault(); prev.click(); } });
+    row.addEventListener("scroll", sync, {passive: true}); addEventListener("resize", sync); sync();
+  }
+}
+</script>
 </body>
 </html>
