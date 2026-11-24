@@ -11,7 +11,7 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='0,0 64,0 64,36 100,36 100,100 0,100' fill='%23ff7a2f'/%3E%3Crect x='74' y='0' width='26' height='26' fill='%231a0d04'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
 <style>
 /* Layout: light single-product landing (Ignite-style) — sticky blurred nav, timeline strip, split hero with live demo, bento grid, process accordion, engagement cards, FAQ, globe CTA */
 :root{
@@ -29,7 +29,7 @@
   --ok:#157f4a;
   --display:"Sora",ui-sans-serif,system-ui,sans-serif;
   --body:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --mono:var(--body);
   --wrap:1160px;
   --r:14px;
 }
@@ -41,7 +41,7 @@ a{color:inherit}
 h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.02em}
 p{margin:0}
 .wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
+.eyebrow{font:600 14px/1.2 var(--body);color:var(--accent-text)}
 .sec{padding-block:clamp(72px,10vw,120px)}
 .sec-head{display:grid;gap:14px;max-width:680px;margin-bottom:48px}
 .sec-head h2{font-size:clamp(30px,4.4vw,48px)}
@@ -86,13 +86,13 @@ p{margin:0}
 .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .hero-copy{display:grid;gap:26px;min-width:0}
 .pill{justify-self:start;display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 8px;border:1px solid var(--line);border-radius:999px;background:var(--bg-2);font-size:13px;color:var(--muted)}
-.pill span{background:rgba(95,211,154,.14);color:var(--ok);font:500 11px var(--mono);padding:4px 8px;border-radius:999px;letter-spacing:.06em}
+.pill span{background:rgba(95,211,154,.14);color:var(--ok);font:600 12px var(--body);padding:4px 9px;border-radius:999px}
 .hero h1{font-size:clamp(40px,6.4vw,76px);font-weight:800}
 .hero h1 em{font-style:normal;background:linear-gradient(100deg,#e2560a,var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero .lede{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:56ch}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
-.pillars{display:flex;flex-wrap:wrap;gap:8px 18px;font:500 12.5px var(--mono);color:var(--muted);letter-spacing:.04em}
-.pillars i{font-style:normal;color:var(--accent-text)}
+.pillars{display:flex;flex-wrap:wrap;gap:8px 20px;font:500 14px var(--body);color:var(--muted)}
+.pillars i{font-style:normal;color:var(--accent-text);margin-right:4px}
 @media (max-width:960px){.hero-grid{grid-template-columns:1fr}}
 
 /* gap finder demo */
@@ -101,7 +101,7 @@ p{margin:0}
 .demo-bar .dots{display:flex;gap:6px;margin-right:6px}
 .demo-bar .dots i{width:10px;height:10px;border-radius:50%;background:var(--line)}
 .demo-body{padding:20px;display:grid;gap:18px}
-.demo-q{font:600 15px var(--display)}
+.demo-q{font:600 19px/1.3 var(--display)}
 .demo-q small{display:block;font:400 13px var(--body);color:var(--muted);margin-top:4px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{font:500 13px var(--body);padding:9px 13px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--muted);cursor:pointer;transition:all .18s}
@@ -109,9 +109,9 @@ p{margin:0}
 .chip[aria-pressed="true"]{background:rgba(255,122,47,.14);border-color:var(--accent);color:var(--fg)}
 .result{border:1px solid var(--line);border-radius:14px;background:var(--bg);padding:16px;display:grid;gap:14px}
 .result-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
-.result-label{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.result-label{font:500 13px var(--body);color:var(--muted)}
 .result-build{font:700 22px var(--display);margin-top:4px}
-.badge{font:500 12px var(--mono);padding:6px 10px;border-radius:8px;background:rgba(95,211,154,.12);color:var(--ok);white-space:nowrap}
+.badge{font:600 13px var(--body);padding:6px 11px;border-radius:999px;background:rgba(95,211,154,.12);color:var(--ok);white-space:nowrap}
 .feat{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:14px}
 .feat li{display:flex;gap:10px;align-items:flex-start}
 .feat li::before{content:"";flex:none;width:6px;height:6px;margin-top:8px;border-radius:2px;background:var(--accent)}
@@ -147,7 +147,7 @@ p{margin:0}
 .kit div:last-child{border-right:0}
 .kit b{font:600 16px var(--display)}
 .kit small{color:var(--muted);font-size:14px}
-.kit .eyebrow{font-size:11px}
+.kit .eyebrow{font-size:13px}
 @media (max-width:900px){.t-a,.t-b,.t-c,.t-d{grid-column:span 6}.kit{grid-template-columns:1fr 1fr}.kit div:nth-child(2){border-right:0}.kit div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 @media (max-width:520px){.kit{grid-template-columns:1fr}.kit div{border-right:0;border-bottom:1px solid var(--line)}.kit div:last-child{border-bottom:0}}
 
@@ -176,7 +176,7 @@ p{margin:0}
 /* audience */
 .aud{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .aud-card{border:1px solid var(--line);border-radius:18px;padding:28px;background:linear-gradient(180deg,var(--surface),transparent);display:grid;gap:14px;align-content:start}
-.aud-card .who{font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-text)}
+.aud-card .who{font:600 14px var(--body);color:var(--accent-text)}
 .aud-card h3{font-size:21px;line-height:1.25}
 .aud-card p{color:var(--muted);font-size:15px}
 @media (max-width:900px){.aud{grid-template-columns:1fr}}
@@ -218,7 +218,7 @@ p{margin:0}
 .plan.feature{border-color:rgba(255,122,47,.55);background:linear-gradient(160deg,rgba(255,122,47,.10),var(--surface) 55%)}
 .plan.dim{opacity:.5}
 .plan .tier{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.plan .tier span{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-text)}
+.plan .tier span{font:600 14px var(--body);color:var(--accent-text)}
 .plan h3{font-size:28px}
 .plan .when{font:500 14px var(--mono);color:var(--muted)}
 .plan .feat{font-size:15px}
@@ -326,7 +326,7 @@ footer a:hover{color:var(--fg)}
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <div class="pill"><span>NOW BOOKING</span>Free 30-minute intro calls</div>
+        <div class="pill"><span>Now booking</span>Free 30-minute intro calls</div>
         <h1>Websites built <em>for your business</em>, not a template.</h1>
         <p class="lede">Custom websites designed and built from the ground up around how your business actually runs. Secure by default, registered in your name, and supported for as long as you need. When you're ready for more, I build platforms, CRMs and apps too.</p>
         <div class="hero-ctas">
@@ -334,22 +334,21 @@ footer a:hover{color:var(--fg)}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           <a class="btn btn-ghost" href="#process">See how it works</a>
         </div>
-        <div class="pillars"><span><i>/</i> Business</span><span><i>/</i> Technology</span><span><i>/</i> Security</span><span><i>/</i> AI prompt engineering</span></div>
+        <div class="pillars"><span><i>✓</i>Registered in your name</span><span><i>✓</i>Secure by default</span><span><i>✓</i>Changes within 2 business days</span></div>
       </div>
 
-      <div class="demo rv" aria-label="Gap finder demo">
-        <div class="demo-bar"><span class="dots"><i></i><i></i><i></i></span>gap-finder · try it</div>
+      <div class="demo rv" aria-label="What's holding your business back?">
         <div class="demo-body">
-          <div class="demo-q">What's slowing your business down?</div>
+          <div class="demo-q">What's holding your business back?<small>Tap everything that applies.</small></div>
           <div class="chips" id="chips"></div>
           <div class="result" aria-live="polite">
             <div class="result-top">
-              <div><div class="result-label">Likely build</div><div class="result-build" id="r-build">Website</div></div>
-              <div class="badge" id="r-time">Test model · 48–72 hrs</div>
+              <div><div class="result-label">What I'd build</div><div class="result-build" id="r-build">Website</div></div>
+              <div class="badge" id="r-time">First look in 2–3 days</div>
             </div>
             <ul class="feat" id="r-feat"></ul>
             <div class="meter">
-              <div class="meter-row"><span>Gaps identified</span><b id="r-count">2 of 9</b></div>
+              <div class="meter-row"><span>Problems this would fix</span><b id="r-count">2 of 9</b></div>
               <div class="meter-track"><div class="meter-fill" id="r-fill"></div></div>
             </div>
           </div>
@@ -360,8 +359,8 @@ footer a:hover{color:var(--fg)}
 
   <div class="band" aria-hidden="true">
     <div class="band-track">
-      <span>Business websites</span><span>Landing pages</span><span>Online booking &amp; payments</span><span>Customer portals</span><span>Internal platforms</span><span>Client CRMs</span><span>iOS &amp; Android apps</span><span>AI-assisted workflows</span>
-      <span>Business websites</span><span>Landing pages</span><span>Online booking &amp; payments</span><span>Customer portals</span><span>Internal platforms</span><span>Client CRMs</span><span>iOS &amp; Android apps</span><span>AI-assisted workflows</span>
+      <span>Get found on Google</span><span>Tap to call</span><span>Online booking</span><span>Contact forms that reach your inbox</span><span>Take payments online</span><span>Looks great on phones</span><span>Customer portals</span><span>Client CRMs</span>
+      <span>Get found on Google</span><span>Tap to call</span><span>Online booking</span><span>Contact forms that reach your inbox</span><span>Take payments online</span><span>Looks great on phones</span><span>Customer portals</span><span>Client CRMs</span>
     </div>
   </div>
 
@@ -727,7 +726,7 @@ function render(){
   const feats = sel.flatMap(g => g.feats);
   if (sel.length) feats.push("Secure access, registered to your name");
   document.getElementById("r-feat").innerHTML = (feats.length ? feats : ["Pick a few above to see a first read"]).map(f => "<li>"+f+"</li>").join("");
-  document.getElementById("r-time").textContent = sel.length ? "Test model · 48–72 hrs" : "Waiting on you";
+  document.getElementById("r-time").textContent = sel.length ? "First look in 2–3 days" : "Waiting on you";
   document.getElementById("r-count").textContent = sel.length + " of " + GAPS.length;
   document.getElementById("r-fill").style.width = (sel.length / GAPS.length * 100) + "%";
 }
