@@ -7,7 +7,8 @@
 <title>QCS HVAC | Heating, Air Conditioning &amp; Walk-in Coolers in Massachusetts</title>
 <meta name="description" content="QCS HVAC (Quality Cooling Services) installs and repairs heating, air conditioning and walk-in coolers for homes and businesses across Massachusetts, including Nantucket and Martha's Vineyard. Free estimates. Call 857-880-9631.">
 <meta name="theme-color" content="#0c2440">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c2440'/%3E%3Cpath d='M14 38c10-10 22-14 36-12' stroke='%2322b8cf' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M14 28c10-8 20-10 32-8' stroke='%232f80ed' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="/preview/qcs-hvac/qcs-icon.png">
+<link rel="apple-touch-icon" href="/preview/qcs-hvac/qcs-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap">
 <script type="application/ld+json">
@@ -51,31 +52,31 @@ img{display:block;max-width:100%}
 .promo{background:var(--teal-lt);color:var(--navy);text-align:center;font-size:15px;padding:9px 16px}
 .promo b{color:var(--blue-dk)}
 
-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:74px}
+header{position:sticky;top:0;z-index:40;background:rgba(12,36,64,.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.1)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:84px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy)}
-.brand svg{width:40px;height:40px;flex:none}
+.brand img{height:56px;width:auto}
 .brand b{font:800 21px Manrope,sans-serif;letter-spacing:.02em;display:block;line-height:1}
 .brand small{display:block;font-size:12.5px;color:var(--muted);margin-top:3px}
 nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
-nav a{text-decoration:none;font-weight:500;font-size:15.5px;color:var(--ink)}
-nav a:hover{color:var(--blue)}
+nav a{text-decoration:none;font-weight:500;font-size:15.5px;color:#e6edf5}
+nav a:hover{color:#6fd3e3}
 .head-cta{display:flex;align-items:center;gap:12px}
-.head-phone{font-weight:700;color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap}
-.head-phone svg{width:20px;height:20px;color:var(--blue)}
-.menu-btn{display:none;width:48px;height:48px;border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer;place-items:center}
+.head-phone{font-weight:700;color:#fff;text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.head-phone svg{width:20px;height:20px;color:#6fd3e3}
+.menu-btn{display:none;width:48px;height:48px;border:1px solid rgba(255,255,255,.3);border-radius:10px;background:transparent;color:#fff;cursor:pointer;place-items:center}
 .menu-btn svg{width:22px;height:22px}
-.mobile-nav{display:none;border-top:1px solid var(--line);background:#fff}
+.mobile-nav{display:none;border-top:1px solid rgba(255,255,255,.12);background:var(--navy)}
 .mobile-nav.open{display:block}
-.mobile-nav a{display:block;padding:15px max(20px,4vw);border-bottom:1px solid var(--line);text-decoration:none;font-weight:500}
+.mobile-nav a{display:block;padding:15px max(20px,4vw);border-bottom:1px solid rgba(255,255,255,.1);text-decoration:none;font-weight:500;color:#fff}
 @media(max-width:980px){nav,.head-cta .btn{display:none}.menu-btn{display:grid}}
-@media(max-width:520px){.head-phone span{display:none}.brand small{display:none}}
+@media(max-width:520px){.head-phone span{display:none}.brand img{height:46px}}
 
 .hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:stretch;padding-top:clamp(48px,6vw,84px);padding-bottom:clamp(48px,6vw,84px)}
+.hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;padding-top:clamp(48px,6vw,84px);padding-bottom:clamp(48px,6vw,84px)}
 .hero .chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:6px 14px;font-size:14px}
 .hero .chip i{width:8px;height:8px;border-radius:50%;background:#5ee0b0;display:inline-block}
-.hero h1{font-size:clamp(38px,5.2vw,62px);margin:20px 0 18px}
+.hero h1{font-size:clamp(36px,4.3vw,56px);margin:20px 0 18px}
 .hero h1 span{color:#6fd3e3}
 .hero p.sub{font-size:19px;color:#d4dde7;max-width:52ch}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
@@ -83,8 +84,8 @@ nav a:hover{color:var(--blue)}
 .trust span{display:flex;align-items:center;gap:8px}
 .trust svg{width:18px;height:18px;color:#6fd3e3}
 .hero-grid>div{align-self:center}
-.hero-photo{position:relative;border-radius:18px;overflow:hidden;min-height:480px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:68% center}
+.hero-photo{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
 .hero-photo figcaption{position:absolute;left:14px;bottom:14px;background:rgba(12,36,64,.85);border-radius:10px;padding:10px 14px;font-size:14px;max-width:80%}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-photo{order:-1;aspect-ratio:16/10;min-height:0}}
 
@@ -200,10 +201,7 @@ footer a:hover{color:#fff;text-decoration:underline}
 
 <header>
   <div class="wrap bar">
-    <a class="brand" href="#top" aria-label="QCS HVAC home">
-      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0c2440"/><path d="M14 38c10-10 22-14 36-12" stroke="#22b8cf" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M14 28c10-8 20-10 32-8" stroke="#2f80ed" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
-      <span><b>QCS HVAC</b><small>Quality Cooling Services</small></span>
-    </a>
+    <a class="brand" href="#top"><img src="/preview/qcs-hvac/qcs-logo.png" alt="QCS HVAC, Quality Cooling Services" width="618" height="234"></a>
     <nav aria-label="Main">
       <ul>
         <li><a href="#services">Services</a></li>
@@ -378,6 +376,7 @@ footer a:hover{color:#fff;text-decoration:underline}
 <footer>
   <div class="wrap">
     <div>
+      <img src="/preview/qcs-hvac/qcs-logo.png" alt="QCS HVAC, Quality Cooling Services" width="618" height="234" style="height:64px;width:auto;margin-bottom:16px">
       <h4>QCS HVAC · Quality Cooling Services</h4>
       <p>Heating, air conditioning and walk-in coolers for homes and businesses across Massachusetts.</p>
     </div>
