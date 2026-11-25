@@ -87,7 +87,7 @@ nav a:hover{color:var(--blue)}
 .hero-photo{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
 .hero-photo img{width:100%;height:100%;object-fit:cover}
 .hero-photo figcaption{position:absolute;left:14px;bottom:14px;background:rgba(12,36,64,.85);border-radius:10px;padding:10px 14px;font-size:14px;max-width:80%}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-photo{aspect-ratio:4/3;min-height:0}.hero-photo figcaption{display:none}}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-photo{aspect-ratio:4/3;min-height:0}.hero-photo figcaption{display:none}.hero h1{font-size:34px}.hero p.sub{font-size:17px}}
 
 .emergency{background:var(--warn-lt);border-bottom:1px solid #f4d7c3}
 .emergency .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding-top:22px;padding-bottom:22px}
@@ -137,6 +137,41 @@ nav a:hover{color:var(--blue)}
 .area b{display:block;margin-bottom:4px}
 @media(max-width:900px){.why{grid-template-columns:1fr}}
 
+.creds{background:#fff;border-bottom:1px solid var(--line)}
+.creds ul{list-style:none;margin:0;padding:22px 0 6px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.creds li{display:flex;align-items:center;gap:10px;font-size:15px;color:var(--muted)}
+.creds li b{color:var(--ink)}
+.creds svg{width:22px;height:22px;flex:none;color:var(--teal)}
+.confirm{margin:6px 0 16px;font-size:12.5px;color:var(--warn);background:var(--warn-lt);border:1px dashed #f0b48a;border-radius:8px;padding:5px 10px;display:inline-block}
+@media(max-width:900px){.creds ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
+.towns{list-style:none;margin:10px 0 8px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.towns li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14.5px;font-weight:500}
+.area p{margin:6px 0 0;font-size:15px;color:var(--muted)}
+.area p a{color:var(--blue);font-weight:600}
+.area .confirm{margin-top:12px}
+.rating{display:flex;align-items:center;gap:10px;font-size:18px}
+.stars{color:#fbbf24;letter-spacing:2px;font-size:22px}
+.review{margin:10px 0 0;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:30px 34px;max-width:620px}
+.review blockquote{margin:0;font:600 clamp(22px,2.6vw,28px)/1.35 Manrope,Inter,sans-serif}
+.review figcaption{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:20px;text-align:left}
+.review .av{width:40px;height:40px;border-radius:50%;background:#7e57c2;display:grid;place-items:center;font-weight:700}
+.review small{display:block;color:#b8c6d6;font-size:13px}
+.rev-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.gallery figure{cursor:zoom-in}
+.gallery figure:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.gallery .zoom{position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:8px;background:rgba(12,36,64,.7);color:#fff;display:grid;place-items:center;opacity:.85}
+.gallery .zoom svg{width:16px;height:16px}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(6,16,30,.97);display:flex;align-items:center;justify-content:center;padding:24px}
+.lb[hidden]{display:none}
+.lb figure{margin:0;max-width:min(1100px,100%);text-align:center}
+.lb img{max-width:100%;max-height:80vh;border-radius:12px;display:block;margin:0 auto}
+.lb figcaption{color:#fff;margin-top:12px;font-size:16px}
+.lb button{background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:50%;width:48px;height:48px;font-size:30px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.lb button:hover{background:rgba(255,255,255,.24)}
+.lb-x{position:absolute;top:16px;right:16px}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%)}
+.lb-prev{left:16px}.lb-next{right:16px}
+@media(max-width:700px){.lb{padding:12px}.lb-nav{top:auto;bottom:22px;transform:none}.lb-prev{left:calc(50% - 60px)}.lb-next{right:calc(50% - 60px)}.lb img{max-height:70vh}}
 .reviews{background:var(--navy);color:#fff;text-align:center}
 .reviews .wrap{display:grid;justify-items:center;gap:16px}
 .reviews p{color:#d4dde7;max-width:56ch;font-size:18px}
@@ -226,8 +261,8 @@ footer a:hover{color:#fff;text-decoration:underline}
     <div class="wrap hero-grid">
       <div>
         <span class="chip"><i></i>Hours 7:00 am – 6:00 pm · Free estimates</span>
-        <h1>Heating, cooling &amp; walk-in coolers <span>done right</span> in Massachusetts.</h1>
-        <p class="sub">QCS HVAC installs, repairs and maintains heating and air conditioning for homes and businesses, plus walk-in coolers and freezers for restaurants and shops.</p>
+        <h1>Heating, cooling &amp; walk-in coolers, <span>done right.</span></h1>
+        <p class="sub">Install, repair and maintenance for homes, businesses and restaurants across Massachusetts.</p>
         <div class="hero-ctas">
           <a class="btn btn-white" href="#contact"><svg aria-hidden="true"><use href="#i-cal"/></svg>Request a free estimate</a>
           <a class="btn btn-outline-w" href="tel:+18578809631"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call 857-880-9631</a>
@@ -235,13 +270,25 @@ footer a:hover{color:#fff;text-decoration:underline}
         <div class="trust">
           <span><svg aria-hidden="true"><use href="#i-check"/></svg>15+ years of experience</span>
           <span><svg aria-hidden="true"><use href="#i-check"/></svg>Homes &amp; businesses</span>
-          <span><svg aria-hidden="true"><use href="#i-check"/></svg>Serving Nantucket &amp; Martha's Vineyard too</span>
+          <span><svg aria-hidden="true"><use href="#i-check"/></svg>Nantucket &amp; Martha's Vineyard too</span>
         </div>
       </div>
       <figure class="hero-photo" style="margin:0">
         <img src="/preview/qcs-hvac/photos/qcs-IMG_9842.webp" alt="A newly built shingled home with the QCS HVAC service truck parked in front" fetchpriority="high">
         <figcaption>New construction HVAC install, start to finish</figcaption>
       </figure>
+    </div>
+  </section>
+
+  <section class="creds" aria-label="Licenses and insurance">
+    <div class="wrap">
+      <ul>
+        <li><svg aria-hidden="true"><use href="#i-shield"/></svg><span><b>Licensed</b> in Massachusetts</span></li>
+        <li><svg aria-hidden="true"><use href="#i-shield"/></svg><span><b>Fully insured</b> for homes &amp; businesses</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>EPA 608</b> certified technicians</span></li>
+        <li><svg aria-hidden="true"><use href="#i-cal"/></svg><span><b>Free</b> written estimates</span></li>
+      </ul>
+      <p class="confirm">Concept note: license numbers and insurance details to be confirmed with QCS.</p>
     </div>
   </section>
 
@@ -314,7 +361,11 @@ footer a:hover{color:#fff;text-decoration:underline}
           <div class="why-item"><span class="ico"><svg aria-hidden="true"><use href="#i-talk"/></svg></span><div><b>You'll always know where things stand</b><p>We stay in touch from the first call until the job is done.</p></div></div>
           <div class="why-item"><span class="ico"><svg aria-hidden="true"><use href="#i-cal"/></svg></span><div><b>Free estimates</b><p>Tell us what you need and we'll come back with a clear quote.</p></div></div>
         </div>
-        <div class="area"><b>Where we work</b>Based in Clinton, MA, serving homes and businesses across Massachusetts, including Nantucket and Martha's Vineyard.</div>
+        <div class="area" id="areas"><b>Towns we serve</b>
+          <ul class="towns"><li>Clinton</li><li>Lowell</li><li>Worcester</li><li>Marlborough</li><li>Hudson</li><li>Leominster</li><li>Framingham</li><li>Chelmsford</li><li>Billerica</li><li>Boston</li><li>Cambridge</li><li>Nantucket</li><li>Martha's Vineyard</li></ul>
+          <p>Plus nearby towns across Massachusetts. Don't see yours? <a href="tel:+18578809631">Give us a call.</a></p>
+          <p class="confirm">Concept note: town list to be confirmed with QCS.</p>
+        </div>
       </div>
       <div class="why-photo"><img src="/preview/qcs-hvac/photos/qcs-IMG_5675.webp" alt="QCS HVAC technicians working on ladders beside a home" loading="lazy"></div>
     </div>
@@ -323,9 +374,16 @@ footer a:hover{color:#fff;text-decoration:underline}
   <section class="sec reviews">
     <div class="wrap">
       <div class="label" style="color:#6fd3e3">Reviews</div>
-      <h2>See what our customers say</h2>
-      <p>Read reviews from homeowners and businesses we've worked with.</p>
-      <a class="btn btn-white" href="https://www.yelp.com/biz/NOvvUMh7PwjsaRPB-zizog" target="_blank" rel="noopener">Read our reviews on Yelp</a>
+      <h2>What our customers say</h2>
+      <div class="rating"><span class="stars" aria-hidden="true">★★★★★</span><span><b>5.0</b> on Google</span></div>
+      <figure class="review">
+        <blockquote>“Great service, professional team, and fair pricing.”</blockquote>
+        <figcaption><span class="av" aria-hidden="true">P</span><span><b>Pedro</b><small>Google review · ★★★★★</small></span></figcaption>
+      </figure>
+      <div class="rev-ctas">
+        <a class="btn btn-white" href="https://www.google.com/maps/search/?api=1&amp;query=Quality%20cooling%20services%20216%20Central%20St%20Lowell%20MA" target="_blank" rel="noopener">See us on Google</a>
+        <a class="btn btn-outline-w" href="https://www.google.com/maps/search/?api=1&amp;query=Quality%20cooling%20services%20216%20Central%20St%20Lowell%20MA" target="_blank" rel="noopener">Worked with us? Leave a review</a>
+      </div>
     </div>
   </section>
 
@@ -386,11 +444,18 @@ footer a:hover{color:#fff;text-decoration:underline}
     </div>
     <div>
       <h4>Links</h4>
-      <ul><li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li><li><a href="#pay">Pay your bill</a></li><li><a href="https://www.yelp.com/biz/NOvvUMh7PwjsaRPB-zizog" target="_blank" rel="noopener">Yelp reviews</a></li></ul>
+      <ul><li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li><li><a href="#pay">Pay your bill</a></li><li><a href="https://www.google.com/maps/search/?api=1&amp;query=Quality%20cooling%20services%20216%20Central%20St%20Lowell%20MA" target="_blank" rel="noopener">Google reviews</a></li></ul>
     </div>
   </div>
   <div class="wrap legal">© <span id="yr">2026</span> QCS HVAC · Quality Cooling Services. All rights reserved.</div>
 </footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Project photo" hidden>
+  <button type="button" class="lb-x" id="lb-x" aria-label="Close">×</button>
+  <button type="button" class="lb-nav lb-prev" id="lb-prev" aria-label="Previous photo">‹</button>
+  <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+  <button type="button" class="lb-nav lb-next" id="lb-next" aria-label="Next photo">›</button>
+</div>
 
 <div class="callbar">
   <a class="btn btn-primary" href="tel:+18578809631"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call now</a>
@@ -414,7 +479,24 @@ footer a:hover{color:#fff;text-decoration:underline}
     ["/preview/qcs-hvac/photos/qcs-IMG_20140930_083045.webp", "cold", "Walk-in freezer interior"]
   ];
   const g = document.getElementById("gallery");
-  g.innerHTML = shots.map(([f, t, c]) => `<figure data-t="${t}"><img src="${f}" alt="${c}" loading="lazy"><figcaption>${c}</figcaption></figure>`).join("");
+  g.innerHTML = shots.map(([f, t, c], i) => `<figure data-t="${t}" data-i="${i}" tabindex="0" role="button" aria-label="Enlarge photo: ${c}"><img src="${f}" alt="${c}" loading="lazy"><figcaption>${c}</figcaption><span class="zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></figure>`).join("");
+  const lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img"), lbCap = document.getElementById("lb-cap");
+  let cur = 0, lastFocus = null;
+  const visible = () => [...g.querySelectorAll("figure")].filter(f => !f.hidden).map(f => +f.dataset.i);
+  const show = i => { cur = i; const [f, , c] = shots[i]; lbImg.src = f; lbImg.alt = c; lbCap.textContent = c; };
+  const openLb = i => { lastFocus = document.activeElement; show(i); lb.hidden = false; document.body.style.overflow = "hidden"; document.getElementById("lb-x").focus(); };
+  const closeLb = () => { lb.hidden = true; document.body.style.overflow = ""; if (lastFocus) lastFocus.focus(); };
+  const step = d => { const v = visible(); const p = v.indexOf(cur); show(v[(p + d + v.length) % v.length]); };
+  g.addEventListener("click", e => { const f = e.target.closest("figure"); if (f) openLb(+f.dataset.i); });
+  g.addEventListener("keydown", e => { const f = e.target.closest("figure"); if (f && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); openLb(+f.dataset.i); } });
+  document.getElementById("lb-x").addEventListener("click", closeLb);
+  document.getElementById("lb-prev").addEventListener("click", () => step(-1));
+  document.getElementById("lb-next").addEventListener("click", () => step(1));
+  lb.addEventListener("click", e => { if (e.target === lb) closeLb(); });
+  document.addEventListener("keydown", e => { if (lb.hidden) return; if (e.key === "Escape") closeLb(); if (e.key === "ArrowLeft") step(-1); if (e.key === "ArrowRight") step(1); });
+  let sx = null;
+  lb.addEventListener("touchstart", e => { sx = e.touches[0].clientX; }, {passive: true});
+  lb.addEventListener("touchend", e => { if (sx === null) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1); sx = null; });
   document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
     document.querySelectorAll(".tabs button").forEach(x => x.setAttribute("aria-pressed", x === b));
     const f = b.dataset.f;
